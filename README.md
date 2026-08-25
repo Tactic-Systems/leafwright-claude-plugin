@@ -15,6 +15,21 @@ On first use Claude Code opens a browser window to sign in to Leafwright and
 pick an organization and default project. Get a free account (100 PDFs/month,
 no card) at [leafwright.co](https://leafwright.co).
 
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `/leafwright:pdf` | Render HTML, a file, or a URL to a PDF |
+| `/leafwright:invoice` | Create an invoice template with AI |
+| `/leafwright:report` | Create a multi-section report template |
+| `/leafwright:template` | Create any template from a description |
+| `/leafwright:fix` | Diagnose and fix a render from its logs |
+| `/leafwright:migrate-puppeteer` | Replace Puppeteer PDF code with Leafwright |
+| `/leafwright:add-export` | Add a server-side PDF export to your app |
+
+You can also just ask in plain language — the commands are shortcuts to the
+same tools.
+
 ## What it adds
 
 The plugin connects to Leafwright's hosted MCP server — nothing to install, and
@@ -63,6 +78,7 @@ the dashboard.
 plugins/leafwright/
   .claude-plugin/plugin.json           the plugin manifest
   .mcp.json                            points at https://leafwright.co/mcp
+  commands/*.md                        the /leafwright:* slash commands
   README.md                            what users see
 ```
 
