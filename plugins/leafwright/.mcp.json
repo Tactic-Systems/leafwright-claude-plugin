@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "leafwright": {
+      "type": "http",
+      "url": "https://leafwright.co/mcp"
+    }
+  }
+}
