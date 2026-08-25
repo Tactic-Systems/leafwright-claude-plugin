@@ -30,6 +30,13 @@ no card) at [leafwright.co](https://leafwright.co).
 You can also just ask in plain language — the commands are shortcuts to the
 same tools.
 
+## Skill
+
+The plugin also carries a `generating-pdfs` skill that activates on its own
+whenever you're working on document or PDF generation — including when you're
+looking at Puppeteer or headless-Chrome code. It teaches Claude the HTML rules
+that would otherwise cost a failed render, and the log-driven repair loop.
+
 ## What it adds
 
 The plugin connects to Leafwright's hosted MCP server — nothing to install, and
@@ -79,6 +86,7 @@ plugins/leafwright/
   .claude-plugin/plugin.json           the plugin manifest
   .mcp.json                            points at https://leafwright.co/mcp
   commands/*.md                        the /leafwright:* slash commands
+  skills/generating-pdfs/SKILL.md      auto-activating usage + rules
   README.md                            what users see
 ```
 
