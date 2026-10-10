@@ -11,8 +11,12 @@ bundle.
 /plugin install leafwright@leafwright
 ```
 
-On first use Claude Code opens a browser window to sign in to Leafwright and
-pick an organization and default project. Get a free account (100 PDFs/month,
+These commands install from Leafwright’s public GitHub marketplace, which you
+must add first. The Claude and OpenAI directory submissions are awaiting
+approval (last checked October 10, 2026); directory discovery is not available yet.
+
+Run `/mcp`, select Leafwright, and authenticate. Sign in to Leafwright in the
+browser, then choose an organization and default project. Get a free account (100 PDFs/month,
 no card) at [leafwright.co](https://leafwright.co).
 
 ## Commands
@@ -62,12 +66,29 @@ The same server is available everywhere:
 # Cursor / any client with a remote MCP config
 https://leafwright.co/mcp
 
-# Codex (TOML, in ~/.codex/config.toml)
+# Codex — direct hosted MCP
 codex mcp add leafwright --url https://leafwright.co/mcp
+codex mcp login leafwright
 
 # Local stdio, any client
 npx -y @leafwright/mcp
 ```
+
+For Claude, add the URL in Customize → Connectors → + Add → Add custom
+connector, choose OAuth, and use Register automatically if asked for an OAuth
+client. Then connect, sign in, and enable it for the conversation. Team and
+Enterprise members need their organization’s owner to add it first.
+
+For ChatGPT, use Plugins → + → Add custom MCP server with the same URL and
+OAuth, subject to account and workspace permissions. Review and install your
+custom plugin, sign in, then select it with `@` in a new conversation. Follow
+the [OpenAI custom MCP guide](https://developers.openai.com/plugins/deploy/connect-chatgpt).
+
+Direct MCP connections provide tools without installing the submitted OpenAI
+plugin’s bundled skill. Use either hosted MCP or local stdio for a client;
+local stdio needs Node.js and npm. Complete local login by calling
+`leafwright_login`, approving browser access, then calling `leafwright_auth_status`.
+The [full setup guide](https://leafwright.co/docs/mcp) covers the client configurations.
 
 It is also listed in the official MCP registry as `co.leafwright/leafwright`.
 
