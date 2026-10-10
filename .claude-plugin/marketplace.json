@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "PDF and document generation for coding agents.",
-    "version": "0.3.0"
+    "version": "0.3.1"
   },
   "plugins": [
     {
       "name": "leafwright",
       "source": "./plugins/leafwright",
       "description": "Render HTML, URLs, and templates to PDF. AI drafts templates and fixes them from logs.",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": {
         "name": "Tactic Systems",
         "url": "https://leafwright.co"

@@ -1,13 +1,15 @@
 {
   "name": "leafwright",
   "description": "Render HTML, URLs, and templates to PDF. AI drafts templates and fixes them from logs.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "Tactic Systems",
     "email": "support@leafwright.co",
     "url": "https://leafwright.co"
   },
   "homepage": "https://leafwright.co/docs/mcp",
+  "icon": "./assets/logo.png",
+  "privacyPolicyUrl": "https://leafwright.co/privacy",
   "repository": "https://github.com/Tactic-Systems/leafwright-claude-plugin",
   "license": "MIT",
   "keywords": ["pdf", "documents", "mcp", "html-to-pdf", "templates", "rendering"]
